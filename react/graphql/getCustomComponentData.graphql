@@ -1,0 +1,22 @@
+query getDocument(
+$acronym: String
+$fields: [String]
+$pageSize: Int
+$where:String
+$schema: String
+){
+  documents(
+acronym: $acronym
+fields: $fields
+pageSize: $pageSize
+where:$where
+schema: $schema
+  ) {
+  fields {
+    value
+    key
+  }
+  }
+}
+  
+  
